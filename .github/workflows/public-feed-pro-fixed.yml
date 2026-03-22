@@ -1,0 +1,34 @@
+name: Pro Public Market Feed Fixed
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7 14,18,22 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+          cache: false
+
+      - name: Generate pro public feed
+        run: |
+          go run ./cmd/publicfeedpro2
+
+      - name: Commit updated pro public feed
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add docs/public-feed-pro.json
+          git diff --cached --quiet || git commit -m "Update pro public market feed"
+          git push
