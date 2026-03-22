@@ -1,0 +1,34 @@
+name: Public Market Feed
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 14,18,22 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+          cache: false
+
+      - name: Generate public market feed
+        run: |
+          go run ./cmd/publicfeed
+
+      - name: Commit updated public feed
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add docs/public-feed.json
+          git diff --cached --quiet || git commit -m "Update public market feed"
+          git push
