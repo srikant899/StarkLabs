@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StarkLabs Market Scanner</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #0b1020; color: #eef2ff; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    h1 { margin: 0 0 8px; }
+    .sub { color: #a5b4fc; margin-bottom: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .card { background: #141a2f; border: 1px solid #283253; border-radius: 16px; padding: 16px; box-shadow: 0 10px 24px rgba(0,0,0,.25); }
+    .k { color: #93c5fd; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    .v { font-size: 28px; font-weight: 700; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 18px; background: #141a2f; border-radius: 16px; overflow: hidden; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #283253; }
+    th { color: #93c5fd; font-size: 12px; text-transform: uppercase; }
+    .bullish { color: #4ade80; }
+    .bearish { color: #f87171; }
+    .small { font-size: 12px; color: #cbd5e1; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>StarkLabs Market Scanner</h1>
+    <div class="sub">Stocks, options, crypto, unusual flow, and spread ideas.</div>
+    <div class="grid">
+      <div class="card"><div class="k">Provider</div><div class="v" id="provider">-</div></div>
+      <div class="card"><div class="k">Signals</div><div class="v" id="count">-</div></div>
+      <div class="card"><div class="k">Generated</div><div class="v" id="time" style="font-size:20px">-</div></div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Symbol</th><th>Type</th><th>Direction</th><th>Score</th><th>Confidence</th><th>Move %</th><th>Price</th><th>Idea</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <script>
+    async function load() {
+      const res = await fetch('./signals.json', { cache: 'no-store' });
+      const data = await res.json();
+      document.getElementById('provider').textContent = data.provider;
+      document.getElementById('count').textContent = data.signals.length;
+      document.getElementById('time').textContent = new Date(data.generatedAt).toLocaleString();
+      const rows = document.getElementById('rows');
+      rows.innerHTML = '';
+      for (const s of data.signals) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong>${s.symbol}</strong><div class="small">${s.reason}</div></td>
+          <td>${s.assetType}</td>
+          <td class="${s.direction}">${s.direction}</td>
+          <td>${s.score}</td>
+          <td>${s.confidence}</td>
+          <td>${s.expectedMovePct}</td>
+          <td>${s.price}</td>
+          <td>${s.spreadIdea || '-'}</td>`;
+        rows.appendChild(tr);
+      }
+    }
+    load();
+  </script>
+</body>
+</html>
