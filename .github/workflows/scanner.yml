@@ -1,0 +1,36 @@
+name: Market Scanner
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/10 13-21 * * 1-5'
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Generate signals
+        env:
+          DATA_PROVIDER: ${{ secrets.DATA_PROVIDER }}
+        run: |
+          if [ -z "$DATA_PROVIDER" ]; then export DATA_PROVIDER=mock; fi
+          go run main.go
+
+      - name: Commit updated feed
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add docs/signals.json
+          git diff --cached --quiet || git commit -m "Update signals feed"
+          git push
