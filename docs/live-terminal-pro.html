@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>StarkLabs Pro Live Dashboard</title>
+<style>
+:root{--bg:#07101f;--panel:#0f1a33;--panel2:#132246;--border:#20345e;--text:#eef3ff;--muted:#94a7d4;--green:#29d17d;--red:#ff6f6f;--amber:#f7c85b;--blue:#86b7ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#0a1731,#060d1a 58%);font-family:Inter,Arial,sans-serif;color:var(--text)}
+.wrap{max-width:1520px;margin:0 auto;padding:24px}.hero{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:18px}.title{font-size:44px;font-weight:900;letter-spacing:-.03em}.sub{color:var(--muted);font-size:18px;margin-top:8px}.tag{padding:10px 14px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.03);color:var(--blue);font-size:13px}.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:18px}.card{background:linear-gradient(180deg,rgba(19,34,70,.94),rgba(11,19,39,.98));border:1px solid var(--border);border-radius:22px;padding:18px;box-shadow:0 22px 50px rgba(0,0,0,.30)}.k{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#8fb4ff}.v{font-size:30px;font-weight:900;margin-top:6px}.grid{display:grid;grid-template-columns:1.4fr .9fr;gap:18px}.stack{display:grid;gap:18px}.panel-title{font-size:22px;font-weight:900;margin-bottom:14px}.stock-row{padding:18px 0;border-bottom:1px solid rgba(255,255,255,.06)}.head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}.sym{font-size:30px;font-weight:900}.meta{font-size:13px;color:var(--muted);margin-top:6px}.price{font-size:34px;font-weight:900}.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.badge{display:inline-block;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800}.bull{background:rgba(41,209,125,.12);color:var(--green)}.bear{background:rgba(255,111,111,.12);color:var(--red)}.neu{background:rgba(247,200,91,.12);color:var(--amber)}.target-table{width:100%;border-collapse:collapse;margin-top:14px}.target-table td,.target-table th{border-bottom:1px solid #23315f;padding:8px;font-size:13px;text-align:left}.target-table th{color:#95b7ff;text-transform:uppercase;font-size:11px}.pl{font-size:20px;font-weight:900}.pos{color:var(--green)}.neg{color:var(--red)}.tiny{font-size:12px;color:var(--muted)}.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.simple-row{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)}.simple-title{font-size:24px;font-weight:900}.spark{width:180px;height:54px;display:block}.empty{color:var(--muted);padding:12px 0}@media (max-width:1180px){.stats,.grid,.mini-grid{grid-template-columns:1fr}.title{font-size:36px}.spark{width:140px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <div class="title">StarkLabs Pro Live Dashboard</div>
+      <div class="sub">Targets, profit/loss, confidence, stop-loss, mini charts, options, crypto, and debit spread ideas in one terminal-style page.</div>
+    </div>
+    <div class="tag">auto refresh prices · qty 20 default</div>
+  </div>
+  <div class="stats">
+    <div class="card"><div class="k">Provider Mix</div><div class="v" id="providerMix">-</div></div>
+    <div class="card"><div class="k">Generated</div><div class="v" id="generated" style="font-size:20px">-</div></div>
+    <div class="card"><div class="k">Stocks</div><div class="v" id="stockCount">0</div></div>
+    <div class="card"><div class="k">Options</div><div class="v" id="optionCount">0</div></div>
+    <div class="card"><div class="k">Crypto</div><div class="v" id="cryptoCount">0</div></div>
+  </div>
+  <div class="grid">
+    <div class="stack">
+      <div class="card">
+        <div class="panel-title">Stocks · Targets · P/L · Confidence · Stop Loss</div>
+        <div id="stocksPanel"></div>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="mini-grid">
+        <div class="card"><div class="panel-title">Options</div><div id="optionsPanel"></div></div>
+        <div class="card"><div class="panel-title">Crypto</div><div id="cryptoPanel"></div></div>
+      </div>
+      <div class="card"><div class="panel-title">Debit Spreads</div><div id="spreadsPanel"></div></div>
+    </div>
+  </div>
+</div>
+<script>
+function money(v){return '$'+Number(v).toLocaleString(undefined,{maximumFractionDigits:2})}
+function clsNum(v){return v>=0?'pos':'neg'}
+function badgeCls(v){return v>0?'bull':(v<0?'bear':'neu')}
+function drawSpark(values){if(!values||!values.length)return '';const w=180,h=54,p=4;let min=Math.min(...values),max=Math.max(...values);if(max===min)max=min+1;const pts=values.map((v,i)=>{const x=p+(i*(w-2*p)/(values.length-1));const y=h-p-((v-min)*(h-2*p)/(max-min));return `${x},${y}`}).join(' ');return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><polyline fill="none" stroke="#7db4ff" stroke-width="3" points="${pts}"/></svg>`}
+async function load(){
+  const data = await fetch('./public-feed-pro.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>null)
+  if(!data){document.body.insertAdjacentHTML('beforeend','<div class="wrap"><div class="card">public-feed-pro.json unavailable</div></div>');return}
+  document.getElementById('providerMix').textContent=data.providerSummary||'-'
+  document.getElementById('generated').textContent=data.generatedAt?new Date(data.generatedAt).toLocaleString():'-'
+  document.getElementById('stockCount').textContent=(data.stocks||[]).length
+  document.getElementById('optionCount').textContent=(data.options||[]).length
+  document.getElementById('cryptoCount').textContent=(data.crypto||[]).length
+
+  const stocks=document.getElementById('stocksPanel'); stocks.innerHTML='';
+  (data.stocks||[]).slice(0,8).forEach((s,idx)=>{
+    const rows=(s.targets||[]).map(t=>`<tr><td>${t.horizon}</td><td>${money(t.targetPrice)}</td><td>${t.quantity}</td><td>${t.upsidePct}%</td><td class="pl ${clsNum(t.profitLoss)}">${t.profitLoss>=0?'+':''}${money(t.profitLoss)}</td><td>${money(t.stopLoss)}</td><td>${t.confidence}</td></tr>`).join('')
+    const div=document.createElement('div'); div.className='stock-row'
+    div.innerHTML=`<div class="head"><div><div class="sym">${idx+1}. ${s.symbol}</div><div class="meta">${s.thesis||''}</div><div class="pill-row"><span class="badge ${badgeCls(s.changePct)}">${s.changePct}%</span><span class="badge neu">${s.risk}</span><span class="tiny">score ${s.score}</span><span class="tiny">source ${s.source}</span></div></div><div style="text-align:right"><div class="price">${money(s.price)}</div><div class="tiny">updated ${new Date(s.updatedAt).toLocaleTimeString()}</div>${drawSpark(s.spark)}</div></div><table class="target-table"><thead><tr><th>Horizon</th><th>Target</th><th>Qty</th><th>Upside</th><th>P/L</th><th>Stop Loss</th><th>Conf</th></tr></thead><tbody>${rows}</tbody></table>`
+    stocks.appendChild(div)
+  })
+  if(!(data.stocks||[]).length) stocks.innerHTML='<div class="empty">No stock data available.</div>'
+
+  const options=document.getElementById('optionsPanel'); options.innerHTML='';
+  (data.options||[]).forEach(o=>{const d=document.createElement('div'); d.className='simple-row'; d.innerHTML=`<div><div class="simple-title">${o.underlying}</div><div class="tiny">${o.symbol}</div><div class="meta">${o.strategy}</div><div class="tiny">source ${o.source}</div></div><div style="text-align:right"><div class="price">${money(o.price)}</div><div class="tiny">target ${money(o.target)} · stop ${money(o.stopLoss)}</div><div class="pl ${clsNum(o.profitLoss)}">${o.profitLoss>=0?'+':''}${money(o.profitLoss)}</div><div class="tiny">conf ${o.confidence}</div></div>`; options.appendChild(d)})
+  if(!(data.options||[]).length) options.innerHTML='<div class="empty">No option ideas available.</div>'
+
+  const crypto=document.getElementById('cryptoPanel'); crypto.innerHTML='';
+  (data.crypto||[]).forEach(c=>{const d=document.createElement('div'); d.className='simple-row'; d.innerHTML=`<div><div class="simple-title">${c.product}</div><div class="tiny">source ${c.source}</div><div class="pill-row"><span class="badge bull">${c.bias}</span></div></div><div style="text-align:right"><div class="price">${money(c.price)}</div><div class="tiny">stop ${money(c.stopLoss)}</div></div>`; crypto.appendChild(d)})
+  if(!(data.crypto||[]).length) crypto.innerHTML='<div class="empty">No crypto data available.</div>'
+
+  const spreads=document.getElementById('spreadsPanel'); spreads.innerHTML='';
+  (data.spreads||[]).forEach(s=>{const d=document.createElement('div'); d.className='simple-row'; d.innerHTML=`<div><div class="simple-title">${s.underlying}</div><div class="meta">${s.idea}</div><div class="tiny">source ${s.source}</div></div><div style="text-align:right"><div class="badge ${s.direction==='bullish'?'bull':'bear'}">${s.direction}</div><div class="tiny" style="margin-top:8px">debit ${money(s.debit)} · max ${money(s.maxProfit)}</div><div class="tiny">stop ${money(s.stopLoss)} · conf ${s.confidence}</div></div>`; spreads.appendChild(d)})
+  if(!(data.spreads||[]).length) spreads.innerHTML='<div class="empty">No spread ideas available.</div>'
+}
+load();
+setInterval(load, 60000);
+</script>
+</body>
+</html>
