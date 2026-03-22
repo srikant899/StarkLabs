@@ -1,0 +1,47 @@
+{
+  "generatedAt": "2026-03-22T00:00:00Z",
+  "provider": "mock",
+  "universe": "Mock top 20 stocks",
+  "stocks": [
+    {
+      "symbol": "NVDA",
+      "rank": 1,
+      "currentPrice": 142.4,
+      "dayChangePct": 3.04,
+      "volume": 89000000,
+      "momentumScore": 91.2,
+      "qualityScore": 88.4,
+      "riskBand": "high",
+      "thesis": "AI leader with strong trend and volume expansion",
+      "targets": [
+        {"horizon":"1 week","targetPrice":147.8,"upsidePct":3.79,"stopLoss":135.1,"confidence":74},
+        {"horizon":"1 month","targetPrice":154.9,"upsidePct":8.78,"stopLoss":131.4,"confidence":72},
+        {"horizon":"3 months","targetPrice":167.0,"upsidePct":17.28,"stopLoss":126.8,"confidence":69},
+        {"horizon":"6 months","targetPrice":178.3,"upsidePct":25.21,"stopLoss":122.4,"confidence":66},
+        {"horizon":"12 months","targetPrice":198.7,"upsidePct":39.54,"stopLoss":114.0,"confidence":62}
+      ]
+    },
+    {
+      "symbol": "META",
+      "rank": 2,
+      "currentPrice": 611.0,
+      "dayChangePct": 1.26,
+      "volume": 23200000,
+      "momentumScore": 82.0,
+      "qualityScore": 80.3,
+      "riskBand": "medium",
+      "thesis": "Large-cap trend intact with moderate volatility",
+      "targets": [
+        {"horizon":"1 week","targetPrice":623.0,"upsidePct":1.96,"stopLoss":586.0,"confidence":78},
+        {"horizon":"1 month","targetPrice":642.0,"upsidePct":5.07,"stopLoss":572.0,"confidence":76},
+        {"horizon":"3 months","targetPrice":671.0,"upsidePct":9.82,"stopLoss":548.0,"confidence":73},
+        {"horizon":"6 months","targetPrice":704.0,"upsidePct":15.22,"stopLoss":526.0,"confidence":70},
+        {"horizon":"12 months","targetPrice":758.0,"upsidePct":24.06,"stopLoss":500.0,"confidence":66}
+      ]
+    }
+  ],
+  "notes": [
+    "Mock report shown because API key is missing.",
+    "Add ALPHAVANTAGE_API_KEY as a repository secret for live daily stock targets."
+  ]
+}
