@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>StarkLabs Pro Dashboard</title>
+<style>
+:root{--bg:#071127;--panel:#0f1c3f;--panel2:#142554;--border:#233873;--text:#eef3ff;--muted:#97a8d9;--green:#35d07f;--red:#ff6b6b;--amber:#ffcf5a;--blue:#7db4ff}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:linear-gradient(180deg,#061024,#091736 55%,#071127);color:var(--text)}
+.wrap{max-width:1460px;margin:0 auto;padding:22px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}.title{font-size:42px;font-weight:800}.sub{color:var(--muted);margin-top:6px}.pill{padding:8px 12px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.03);color:var(--blue);font-size:12px}.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:18px}.card{background:linear-gradient(180deg,rgba(20,37,84,.8),rgba(13,24,53,.95));border:1px solid var(--border);border-radius:20px;padding:18px;box-shadow:0 18px 35px rgba(0,0,0,.28)}.k{color:#8db2ff;font-size:12px;letter-spacing:.08em;text-transform:uppercase}.v{font-size:30px;font-weight:800;margin-top:6px}.layout{display:grid;grid-template-columns:1.45fr .9fr;gap:18px}.section-title{font-size:20px;font-weight:800;margin:0 0 12px}.small{font-size:12px;color:var(--muted)}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid rgba(255,255,255,.07);text-align:left;vertical-align:top}th{color:#95b7ff;font-size:12px;text-transform:uppercase}.badge{padding:4px 8px;border-radius:999px;font-size:12px;font-weight:700;display:inline-block}.bull{background:rgba(53,208,127,.12);color:var(--green)}.bear{background:rgba(255,107,107,.12);color:var(--red)}.neu{background:rgba(255,207,90,.12);color:var(--amber)}.target-table{width:100%;border-collapse:collapse}.target-table td,.target-table th{border-bottom:1px solid #23315f;padding:6px;font-size:12px}.idea{padding:12px 14px;border:1px solid rgba(255,255,255,.06);border-radius:14px;background:rgba(255,255,255,.02);margin-bottom:12px}.links a{color:#9dc0ff;text-decoration:none}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}.pos{color:var(--green)}.neg{color:var(--red)}@media (max-width:1100px){.stats,.layout{grid-template-columns:1fr}.title{font-size:34px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <div class="title">StarkLabs Pro Agent</div>
+      <div class="sub">Professional-style research dashboard for stocks, options, crypto, spreads, alerts, and target math.</div>
+    </div>
+    <div class="pill">research agent · quantity default 20</div>
+  </div>
+
+  <div class="stats">
+    <div class="card"><div class="k">Regime</div><div class="v" id="regime">Risk-On</div></div>
+    <div class="card"><div class="k">Provider</div><div class="v" id="provider">mock</div></div>
+    <div class="card"><div class="k">Top Stocks</div><div class="v" id="count">0</div></div>
+    <div class="card"><div class="k">Default Quantity</div><div class="v">20</div></div>
+    <div class="card"><div class="k">Generated</div><div class="v" id="generated" style="font-size:18px">-</div></div>
+  </div>
+
+  <div class="layout">
+    <div class="card">
+      <div class="section-title">Top 20 Daily Targets</div>
+      <table>
+        <thead><tr><th>Rank</th><th>Symbol</th><th>Price</th><th>Day %</th><th>Momentum</th><th>Quality</th><th>Risk</th><th>Targets, Quantity, Profit/Loss</th></tr></thead>
+        <tbody id="targetsBody"></tbody>
+      </table>
+    </div>
+
+    <div>
+      <div class="card">
+        <div class="section-title">Best Setup Today</div>
+        <div class="idea"><span class="badge bull">Bullish</span><div style="margin-top:8px;font-size:22px;font-weight:800" id="bestSetup">Loading...</div><div class="small" id="bestSetupText">Waiting for signals.</div></div>
+        <div class="idea"><span class="badge neu">Options</span><div style="margin-top:8px;font-size:18px;font-weight:800" id="bestOptions">Loading...</div></div>
+        <div class="idea"><span class="badge neu">Crypto</span><div style="margin-top:8px;font-size:18px;font-weight:800" id="bestCrypto">Loading...</div></div>
+      </div>
+
+      <div class="card" style="margin-top:18px">
+        <div class="section-title">Alerts Feed</div>
+        <div id="alerts"></div>
+      </div>
+
+      <div class="card links" style="margin-top:18px">
+        <div class="section-title">Pages</div>
+        <div><a href="./index.html">Scanner</a></div>
+        <div><a href="./top20.html">Top 20 Daily Targets</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function fmtPL(v){const cls=v>=0?'pos':'neg';const sign=v>=0?'+':'';return `<span class="${cls}">${sign}$${v.toFixed(2)}</span>`}
+function badgeCls(direction){return direction==='bullish'?'bull':(direction==='bearish'?'bear':'neu')}
+async function load(){
+  const [topRes, signalsRes, alertsRes] = await Promise.all([
+    fetch('./top20.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({stocks:[],provider:'mock'})),
+    fetch('./signals.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({signals:[]})),
+    fetch('./alerts.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({alerts:[]})),
+  ]);
+  document.getElementById('provider').textContent = topRes.provider || 'mock';
+  document.getElementById('count').textContent = (topRes.stocks||[]).length;
+  document.getElementById('generated').textContent = topRes.generatedAt ? new Date(topRes.generatedAt).toLocaleString() : '-';
+
+  const body = document.getElementById('targetsBody'); body.innerHTML='';
+  (topRes.stocks||[]).forEach(s=>{
+    const qty=20;
+    const targetRows=(s.targets||[]).map(t=>{const pl=(t.targetPrice - s.currentPrice) * qty; return `<tr><td>${t.horizon}</td><td>${t.targetPrice}</td><td>${qty}</td><td>${t.upsidePct}%</td><td>${fmtPL(pl)}</td><td>${t.stopLoss}</td><td>${t.confidence}</td></tr>`}).join('');
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td>${s.rank||''}</td><td><strong>${s.symbol}</strong><div class="small">${s.thesis||''}</div></td><td>${s.currentPrice}</td><td>${s.dayChangePct}%</td><td>${s.momentumScore}</td><td>${s.qualityScore}</td><td>${s.riskBand}</td><td><table class="target-table"><thead><tr><th>Horizon</th><th>Target</th><th>Qty</th><th>Upside</th><th>P/L</th><th>Stop</th><th>Conf</th></tr></thead><tbody>${targetRows}</tbody></table></td>`;
+    body.appendChild(tr);
+  });
+
+  const signals=signalsRes.signals||[];
+  const bestStock = signals.find(x=>x.assetType==='stock') || signals[0];
+  const bestOption = signals.find(x=>x.assetType==='option');
+  const bestCrypto = signals.find(x=>x.assetType==='crypto');
+  document.getElementById('bestSetup').textContent = bestStock ? `${bestStock.symbol} ${bestStock.direction}` : 'No stock signal';
+  document.getElementById('bestSetupText').textContent = bestStock ? (bestStock.reason || '') : 'No stock signal yet';
+  document.getElementById('bestOptions').textContent = bestOption ? `${bestOption.symbol} · ${bestOption.spreadIdea || bestOption.direction}` : 'No option signal yet';
+  document.getElementById('bestCrypto').textContent = bestCrypto ? `${bestCrypto.symbol} · ${bestCrypto.direction}` : 'No crypto signal yet';
+
+  const alerts=document.getElementById('alerts'); alerts.innerHTML='';
+  (alertsRes.alerts||[]).forEach(a=>{const d=document.createElement('div'); d.className='idea'; d.innerHTML=`<div class="badge ${badgeCls(a.direction||'neutral')}">${a.type||'alert'}</div><div style="margin-top:8px;font-weight:800">${a.title}</div><div class="small">${a.message}</div>`; alerts.appendChild(d);});
+}
+load();
+</script>
+</body>
+</html>
