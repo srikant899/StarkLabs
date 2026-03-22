@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>StarkLabs Live Terminal</title>
+<style>
+:root{--bg:#07101f;--panel:#0f1a33;--panel2:#132246;--border:#20345e;--text:#eef3ff;--muted:#94a7d4;--green:#29d17d;--red:#ff6f6f;--amber:#f7c85b;--blue:#86b7ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#0a1731,#060d1a 58%);font-family:Inter,Arial,sans-serif;color:var(--text)}
+.wrap{max-width:1500px;margin:0 auto;padding:24px}.hero{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:18px}.title{font-size:46px;font-weight:900;letter-spacing:-.03em}.sub{color:var(--muted);font-size:18px;margin-top:8px}.tag{padding:10px 14px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.03);color:var(--blue);font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:18px}.card{background:linear-gradient(180deg,rgba(19,34,70,.94),rgba(11,19,39,.98));border:1px solid var(--border);border-radius:22px;padding:18px;box-shadow:0 22px 50px rgba(0,0,0,.30)}.k{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#8fb4ff}.v{font-size:32px;font-weight:900;margin-top:6px}.grid{display:grid;grid-template-columns:1.25fr 1fr;gap:18px}.stack{display:grid;gap:18px}.panel-title{font-size:22px;font-weight:900;margin-bottom:14px}.row{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)}.sym{font-size:28px;font-weight:900}.meta{font-size:13px;color:var(--muted);margin-top:6px}.price{font-size:30px;font-weight:900}.score{font-size:13px;color:#9bbcff}.badge{display:inline-block;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800}.bull{background:rgba(41,209,125,.12);color:var(--green)}.bear{background:rgba(255,111,111,.12);color:var(--red)}.neu{background:rgba(247,200,91,.12);color:var(--amber)}.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.mini{font-size:13px;color:var(--muted)}.pl{font-size:32px;font-weight:900;line-height:1}.pos{color:var(--green)}.neg{color:var(--red)}.qty{font-size:16px;color:#bdd3ff}.target{font-size:17px;font-weight:800}.empty{color:var(--muted);padding:10px 0}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:14px}.tiny{font-size:12px;color:var(--muted)}@media (max-width:1180px){.stats,.grid,.twocol{grid-template-columns:1fr}.title{font-size:38px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <div class="title">StarkLabs Live Terminal</div>
+      <div class="sub">Stocks, options, crypto, and spread ideas with source-tagged prices and larger profit/loss visibility.</div>
+    </div>
+    <div class="tag">default quantity 20 · source tagged</div>
+  </div>
+
+  <div class="stats">
+    <div class="card"><div class="k">Provider Mix</div><div class="v" id="providerMix">-</div></div>
+    <div class="card"><div class="k">Generated</div><div class="v" id="generated" style="font-size:20px">-</div></div>
+    <div class="card"><div class="k">Stocks</div><div class="v" id="stockCount">0</div></div>
+    <div class="card"><div class="k">Options</div><div class="v" id="optionCount">0</div></div>
+    <div class="card"><div class="k">Crypto</div><div class="v" id="cryptoCount">0</div></div>
+  </div>
+
+  <div class="grid">
+    <div class="stack">
+      <div class="card">
+        <div class="panel-title">Top Stocks</div>
+        <div id="stocksPanel"></div>
+      </div>
+      <div class="twocol">
+        <div class="card">
+          <div class="panel-title">Options</div>
+          <div id="optionsPanel"></div>
+        </div>
+        <div class="card">
+          <div class="panel-title">Crypto</div>
+          <div id="cryptoPanel"></div>
+        </div>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="card">
+        <div class="panel-title">Debit Spreads</div>
+        <div id="spreadsPanel"></div>
+      </div>
+      <div class="card">
+        <div class="panel-title">Alerts</div>
+        <div id="alertsPanel"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function clsFromPct(v){return v>0?'bull':(v<0?'bear':'neu')}
+function clsFromPL(v){return v>=0?'pos':'neg'}
+function money(v){return '$'+Number(v).toLocaleString(undefined,{maximumFractionDigits:2})}
+async function load(){
+  const data = await fetch('./public-feed.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>null)
+  if(!data){document.body.insertAdjacentHTML('beforeend','<div class="wrap"><div class="card">public-feed.json unavailable</div></div>');return}
+  document.getElementById('providerMix').textContent = data.providerSummary || '-'
+  document.getElementById('generated').textContent = data.generatedAt ? new Date(data.generatedAt).toLocaleString() : '-'
+  document.getElementById('stockCount').textContent = (data.stocks||[]).length
+  document.getElementById('optionCount').textContent = (data.options||[]).length
+  document.getElementById('cryptoCount').textContent = (data.crypto||[]).length
+
+  const stocksPanel=document.getElementById('stocksPanel')
+  ;(data.stocks||[]).slice(0,8).forEach((s,i)=>{
+    const div=document.createElement('div'); div.className='row'
+    div.innerHTML=`<div><div class="sym">${i+1}. ${s.symbol}</div><div class="meta">source ${s.source} · updated ${new Date(s.updatedAt).toLocaleTimeString()}</div><div class="pill-row"><span class="badge ${clsFromPct(s.changePct)}">${s.changePct}%</span><span class="score">score ${s.score}</span></div></div><div style="text-align:right"><div class="price">${money(s.price)}</div></div>`
+    stocksPanel.appendChild(div)
+  })
+  if(!(data.stocks||[]).length) stocksPanel.innerHTML='<div class="empty">No stock data available.</div>'
+
+  const optionsPanel=document.getElementById('optionsPanel')
+  ;(data.options||[]).forEach(o=>{
+    const div=document.createElement('div'); div.className='row'
+    div.innerHTML=`<div><div class="sym" style="font-size:24px">${o.underlying}</div><div class="meta">${o.symbol}</div><div class="target">${o.strategy}</div><div class="mini">source ${o.source}</div></div><div style="text-align:right"><div class="price">${money(o.price)}</div><div class="qty">qty ${o.quantity} · target ${money(o.target)}</div><div class="pl ${clsFromPL(o.profitLoss)}">${o.profitLoss>=0?'+':''}${money(o.profitLoss)}</div></div>`
+    optionsPanel.appendChild(div)
+  })
+  if(!(data.options||[]).length) optionsPanel.innerHTML='<div class="empty">No option ideas available.</div>'
+
+  const cryptoPanel=document.getElementById('cryptoPanel')
+  ;(data.crypto||[]).forEach(c=>{
+    const div=document.createElement('div'); div.className='row'
+    div.innerHTML=`<div><div class="sym" style="font-size:24px">${c.product}</div><div class="meta">source ${c.source}</div><div class="pill-row"><span class="badge ${c.bias==='bullish'?'bull':'neu'}">${c.bias}</span></div></div><div style="text-align:right"><div class="price">${money(c.price)}</div></div>`
+    cryptoPanel.appendChild(div)
+  })
+  if(!(data.crypto||[]).length) cryptoPanel.innerHTML='<div class="empty">No crypto data available.</div>'
+
+  const spreadsPanel=document.getElementById('spreadsPanel')
+  ;(data.spreads||[]).forEach(s=>{
+    const div=document.createElement('div'); div.className='row'
+    div.innerHTML=`<div><div class="sym" style="font-size:24px">${s.underlying}</div><div class="target">${s.idea}</div><div class="meta">source ${s.source}</div></div><div><span class="badge ${s.direction==='bullish'?'bull':'bear'}">${s.direction}</span></div>`
+    spreadsPanel.appendChild(div)
+  })
+  if(!(data.spreads||[]).length) spreadsPanel.innerHTML='<div class="empty">No spread ideas available.</div>'
+
+  const alertsPanel=document.getElementById('alertsPanel')
+  ;(data.alerts||[]).forEach(a=>{
+    const div=document.createElement('div'); div.className='row'
+    div.innerHTML=`<div><div class="badge neu">${a.type||'alert'}</div><div class="target" style="margin-top:10px">${a.title||''}</div><div class="mini">${a.message||''}</div></div>`
+    alertsPanel.appendChild(div)
+  })
+  if(!(data.alerts||[]).length) alertsPanel.innerHTML='<div class="empty">No alerts available.</div>'
+}
+load()
+</script>
+</body>
+</html>
