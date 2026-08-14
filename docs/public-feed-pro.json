@@ -1,61 +1,61 @@
 {
-  "generatedAt": "2026-08-14T19:05:22Z",
+  "generatedAt": "2026-08-14T22:32:37Z",
   "providerSummary": "Yahoo public market data + Coinbase public prices",
   "stocks": [
     {
       "symbol": "SMCI",
-      "price": 39.7,
+      "price": 39.84,
       "changePct": 0,
-      "score": 84.11,
+      "score": 84.78,
       "risk": "high",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:25Z",
-      "thesis": "20d 60.9%, 60d 29.9%, realized vol 112.1%",
+      "updatedAt": "2026-08-14T22:32:41Z",
+      "thesis": "20d 61.4%, 60d 30.4%, realized vol 112.1%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 41.75,
+          "targetPrice": 41.9,
           "quantity": 20,
-          "profitLoss": 41,
-          "stopLoss": 34.37,
+          "profitLoss": 41.2,
+          "stopLoss": 34.49,
           "confidence": 38,
-          "upsidePct": 5.16
+          "upsidePct": 5.17
         },
         {
           "horizon": "1 month",
-          "targetPrice": 43.61,
+          "targetPrice": 43.76,
           "quantity": 20,
-          "profitLoss": 78.2,
-          "stopLoss": 28.78,
+          "profitLoss": 78.4,
+          "stopLoss": 28.88,
           "confidence": 38,
-          "upsidePct": 9.85
+          "upsidePct": 9.84
         },
         {
           "horizon": "3 months",
-          "targetPrice": 45.76,
+          "targetPrice": 45.92,
           "quantity": 20,
-          "profitLoss": 121.2,
-          "stopLoss": 28.58,
+          "profitLoss": 121.6,
+          "stopLoss": 28.68,
           "confidence": 38,
           "upsidePct": 15.26
         },
         {
           "horizon": "6 months",
-          "targetPrice": 47.32,
+          "targetPrice": 47.49,
           "quantity": 20,
-          "profitLoss": 152.4,
-          "stopLoss": 28.58,
-          "confidence": 38.39,
-          "upsidePct": 19.19
+          "profitLoss": 153,
+          "stopLoss": 28.68,
+          "confidence": 38.4,
+          "upsidePct": 19.2
         },
         {
           "horizon": "12 months",
-          "targetPrice": 48.78,
+          "targetPrice": 48.96,
           "quantity": 20,
-          "profitLoss": 181.6,
-          "stopLoss": 28.58,
-          "confidence": 43.39,
-          "upsidePct": 22.87
+          "profitLoss": 182.4,
+          "stopLoss": 28.68,
+          "confidence": 43.4,
+          "upsidePct": 22.89
         }
       ],
       "spark": [
@@ -86,61 +86,61 @@
         29.81,
         28.64,
         31.13,
-        39.7
+        39.84
       ]
     },
     {
       "symbol": "MSFT",
-      "price": 495.39,
+      "price": 495.4,
       "changePct": 0,
       "score": 62.82,
       "risk": "high",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:23Z",
+      "updatedAt": "2026-08-14T22:32:39Z",
       "thesis": "20d 23.5%, 60d 18.7%, realized vol 57.6%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 512.25,
+          "targetPrice": 512.26,
           "quantity": 20,
-          "profitLoss": 337.12,
-          "stopLoss": 461.25,
+          "profitLoss": 337.2,
+          "stopLoss": 461.26,
           "confidence": 54.33,
           "upsidePct": 3.4
         },
         {
           "horizon": "1 month",
-          "targetPrice": 536.08,
+          "targetPrice": 536.09,
           "quantity": 20,
-          "profitLoss": 813.72,
+          "profitLoss": 813.8,
           "stopLoss": 425.43,
           "confidence": 54.96,
           "upsidePct": 8.21
         },
         {
           "horizon": "3 months",
-          "targetPrice": 581.79,
+          "targetPrice": 581.8,
           "quantity": 20,
-          "profitLoss": 1727.92,
-          "stopLoss": 374.2,
+          "profitLoss": 1728,
+          "stopLoss": 374.21,
           "confidence": 56.63,
           "upsidePct": 17.44
         },
         {
           "horizon": "6 months",
-          "targetPrice": 641.65,
+          "targetPrice": 641.66,
           "quantity": 20,
-          "profitLoss": 2925.12,
-          "stopLoss": 356.68,
+          "profitLoss": 2925.2,
+          "stopLoss": 356.69,
           "confidence": 59.13,
           "upsidePct": 29.52
         },
         {
           "horizon": "12 months",
-          "targetPrice": 758.12,
+          "targetPrice": 758.13,
           "quantity": 20,
-          "profitLoss": 5254.52,
-          "stopLoss": 356.68,
+          "profitLoss": 5254.6,
+          "stopLoss": 356.69,
           "confidence": 64.13,
           "upsidePct": 53.03
         }
@@ -173,63 +173,63 @@
         389.1,
         487.65,
         499.99,
-        495.39
+        495.4
       ]
     },
     {
       "symbol": "PLTR",
-      "price": 174.81,
+      "price": 174.04,
       "changePct": 0,
-      "score": 59.77,
+      "score": 59.01,
       "risk": "high",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:25Z",
-      "thesis": "20d 30.0%, 60d 29.2%, realized vol 109.6%",
+      "updatedAt": "2026-08-14T22:32:40Z",
+      "thesis": "20d 29.5%, 60d 28.7%, realized vol 109.8%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 183.73,
+          "targetPrice": 182.94,
           "quantity": 20,
-          "profitLoss": 178.5,
-          "stopLoss": 151.86,
+          "profitLoss": 178,
+          "stopLoss": 151.15,
           "confidence": 38,
           "upsidePct": 5.11
         },
         {
           "horizon": "1 month",
-          "targetPrice": 191.98,
+          "targetPrice": 191.15,
           "quantity": 20,
-          "profitLoss": 343.5,
-          "stopLoss": 127.79,
+          "profitLoss": 342.2,
+          "stopLoss": 127.14,
           "confidence": 38,
           "upsidePct": 9.83
         },
         {
           "horizon": "3 months",
-          "targetPrice": 201.87,
+          "targetPrice": 200.95,
           "quantity": 20,
-          "profitLoss": 541.3,
-          "stopLoss": 125.86,
+          "profitLoss": 538.2,
+          "stopLoss": 125.31,
           "confidence": 38,
-          "upsidePct": 15.48
+          "upsidePct": 15.46
         },
         {
           "horizon": "6 months",
-          "targetPrice": 209.53,
+          "targetPrice": 208.52,
           "quantity": 20,
-          "profitLoss": 694.5,
-          "stopLoss": 125.86,
-          "confidence": 39.34,
-          "upsidePct": 19.86
+          "profitLoss": 689.6,
+          "stopLoss": 125.31,
+          "confidence": 39.26,
+          "upsidePct": 19.81
         },
         {
           "horizon": "12 months",
-          "targetPrice": 217.4,
+          "targetPrice": 216.23,
           "quantity": 20,
-          "profitLoss": 851.9,
-          "stopLoss": 125.86,
-          "confidence": 44.34,
-          "upsidePct": 24.37
+          "profitLoss": 843.8,
+          "stopLoss": 125.31,
+          "confidence": 44.26,
+          "upsidePct": 24.24
         }
       ],
       "spark": [
@@ -260,63 +260,63 @@
         131.53,
         125.65,
         172.01,
-        174.8
+        174.04
       ]
     },
     {
       "symbol": "MRVL",
-      "price": 218.96,
+      "price": 222.02,
       "changePct": 0,
-      "score": 52.11,
+      "score": 54.28,
       "risk": "high",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:27Z",
-      "thesis": "20d 16.3%, 60d 24.2%, realized vol 87.2%",
+      "updatedAt": "2026-08-14T22:32:42Z",
+      "thesis": "20d 17.9%, 60d 26.0%, realized vol 86.9%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 228.67,
+          "targetPrice": 231.85,
           "quantity": 20,
-          "profitLoss": 194.3,
-          "stopLoss": 196.08,
-          "confidence": 43.05,
-          "upsidePct": 4.44
+          "profitLoss": 196.6,
+          "stopLoss": 198.92,
+          "confidence": 43.17,
+          "upsidePct": 4.43
         },
         {
           "horizon": "1 month",
-          "targetPrice": 239.53,
+          "targetPrice": 242.86,
           "quantity": 20,
-          "profitLoss": 411.5,
-          "stopLoss": 172.08,
-          "confidence": 43.68,
-          "upsidePct": 9.4
+          "profitLoss": 416.8,
+          "stopLoss": 174.67,
+          "confidence": 43.81,
+          "upsidePct": 9.39
         },
         {
           "horizon": "3 months",
-          "targetPrice": 256.22,
+          "targetPrice": 259.84,
           "quantity": 20,
-          "profitLoss": 745.3,
-          "stopLoss": 157.65,
-          "confidence": 45.35,
-          "upsidePct": 17.02
+          "profitLoss": 756.4,
+          "stopLoss": 159.85,
+          "confidence": 45.47,
+          "upsidePct": 17.03
         },
         {
           "horizon": "6 months",
-          "targetPrice": 273.97,
+          "targetPrice": 277.95,
           "quantity": 20,
-          "profitLoss": 1100.3,
-          "stopLoss": 157.65,
-          "confidence": 47.85,
-          "upsidePct": 25.13
+          "profitLoss": 1118.6,
+          "stopLoss": 159.85,
+          "confidence": 47.97,
+          "upsidePct": 25.19
         },
         {
           "horizon": "12 months",
-          "targetPrice": 301.56,
+          "targetPrice": 306.2,
           "quantity": 20,
-          "profitLoss": 1652.1,
-          "stopLoss": 157.65,
-          "confidence": 52.85,
-          "upsidePct": 37.73
+          "profitLoss": 1683.6,
+          "stopLoss": 159.85,
+          "confidence": 52.97,
+          "upsidePct": 37.92
         }
       ],
       "spark": [
@@ -347,150 +347,63 @@
         189.17,
         193.78,
         218.72,
-        218.96
-      ]
-    },
-    {
-      "symbol": "SPY",
-      "price": 776.03,
-      "changePct": 0,
-      "score": 51.95,
-      "risk": "low",
-      "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:27Z",
-      "thesis": "20d 3.4%, 60d 5.8%, realized vol 13.3%",
-      "targets": [
-        {
-          "horizon": "1 week",
-          "targetPrice": 783.34,
-          "quantity": 20,
-          "profitLoss": 146.2,
-          "stopLoss": 763.63,
-          "confidence": 71.13,
-          "upsidePct": 0.94
-        },
-        {
-          "horizon": "1 month",
-          "targetPrice": 795.77,
-          "quantity": 20,
-          "profitLoss": 394.8,
-          "stopLoss": 750.61,
-          "confidence": 71.76,
-          "upsidePct": 2.54
-        },
-        {
-          "horizon": "3 months",
-          "targetPrice": 822.32,
-          "quantity": 20,
-          "profitLoss": 925.8,
-          "stopLoss": 732.01,
-          "confidence": 73.43,
-          "upsidePct": 5.96
-        },
-        {
-          "horizon": "6 months",
-          "targetPrice": 859.02,
-          "quantity": 20,
-          "profitLoss": 1659.8,
-          "stopLoss": 713.77,
-          "confidence": 75.93,
-          "upsidePct": 10.69
-        },
-        {
-          "horizon": "12 months",
-          "targetPrice": 931.23,
-          "quantity": 20,
-          "profitLoss": 3104,
-          "stopLoss": 687.99,
-          "confidence": 80.93,
-          "upsidePct": 20
-        }
-      ],
-      "spark": [
-        682.85,
-        687.35,
-        686.38,
-        678.27,
-        662.29,
-        648.57,
-        634.09,
-        655.83,
-        679.46,
-        701.66,
-        708.45,
-        718.66,
-        733.83,
-        742.31,
-        733.73,
-        750.46,
-        759.57,
-        737.05,
-        750.33,
-        733.58,
-        746.77,
-        747.71,
-        751.83,
-        748.28,
-        739.09,
-        757.67,
-        773.26,
-        776.03
+        222.02
       ]
     },
     {
       "symbol": "MU",
-      "price": 964.24,
+      "price": 971.66,
       "changePct": 0,
-      "score": 51.49,
+      "score": 52.64,
       "risk": "high",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:25Z",
-      "thesis": "20d 13.0%, 60d 38.0%, realized vol 104.1%",
+      "updatedAt": "2026-08-14T22:32:41Z",
+      "thesis": "20d 13.9%, 60d 39.1%, realized vol 104.2%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 1011.96,
+          "targetPrice": 1019.78,
           "quantity": 20,
-          "profitLoss": 954.4,
-          "stopLoss": 844.1,
+          "profitLoss": 962.4,
+          "stopLoss": 850.46,
           "confidence": 38,
           "upsidePct": 4.95
         },
         {
           "horizon": "1 month",
-          "targetPrice": 1058.3,
+          "targetPrice": 1066.46,
           "quantity": 20,
-          "profitLoss": 1881.2,
-          "stopLoss": 718.03,
+          "profitLoss": 1896,
+          "stopLoss": 723.27,
           "confidence": 38,
-          "upsidePct": 9.75
+          "upsidePct": 9.76
         },
         {
           "horizon": "3 months",
-          "targetPrice": 1118.04,
+          "targetPrice": 1126.55,
           "quantity": 20,
-          "profitLoss": 3076,
-          "stopLoss": 694.25,
-          "confidence": 38.96,
-          "upsidePct": 15.95
+          "profitLoss": 3097.8,
+          "stopLoss": 699.6,
+          "confidence": 38.91,
+          "upsidePct": 15.94
         },
         {
           "horizon": "6 months",
-          "targetPrice": 1169.47,
+          "targetPrice": 1178.18,
           "quantity": 20,
-          "profitLoss": 4104.6,
-          "stopLoss": 694.25,
-          "confidence": 41.46,
-          "upsidePct": 21.28
+          "profitLoss": 4130.4,
+          "stopLoss": 699.6,
+          "confidence": 41.41,
+          "upsidePct": 21.25
         },
         {
           "horizon": "12 months",
-          "targetPrice": 1231.17,
+          "targetPrice": 1239.94,
           "quantity": 20,
-          "profitLoss": 5338.6,
-          "stopLoss": 694.25,
-          "confidence": 46.46,
-          "upsidePct": 27.68
+          "profitLoss": 5365.6,
+          "stopLoss": 699.6,
+          "confidence": 46.41,
+          "upsidePct": 27.61
         }
       ],
       "spark": [
@@ -521,63 +434,150 @@
         900.2,
         829.5,
         877.57,
-        964.24
+        971.66
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "price": 776.34,
+      "changePct": 0,
+      "score": 52.01,
+      "risk": "low",
+      "source": "yahoo_public",
+      "updatedAt": "2026-08-14T22:32:42Z",
+      "thesis": "20d 3.4%, 60d 5.8%, realized vol 13.3%",
+      "targets": [
+        {
+          "horizon": "1 week",
+          "targetPrice": 783.66,
+          "quantity": 20,
+          "profitLoss": 146.4,
+          "stopLoss": 763.95,
+          "confidence": 71.13,
+          "upsidePct": 0.94
+        },
+        {
+          "horizon": "1 month",
+          "targetPrice": 796.17,
+          "quantity": 20,
+          "profitLoss": 396.6,
+          "stopLoss": 750.95,
+          "confidence": 71.77,
+          "upsidePct": 2.55
+        },
+        {
+          "horizon": "3 months",
+          "targetPrice": 822.93,
+          "quantity": 20,
+          "profitLoss": 931.8,
+          "stopLoss": 732.36,
+          "confidence": 73.43,
+          "upsidePct": 6
+        },
+        {
+          "horizon": "6 months",
+          "targetPrice": 859.95,
+          "quantity": 20,
+          "profitLoss": 1672.2,
+          "stopLoss": 714.14,
+          "confidence": 75.93,
+          "upsidePct": 10.77
+        },
+        {
+          "horizon": "12 months",
+          "targetPrice": 932.88,
+          "quantity": 20,
+          "profitLoss": 3130.8,
+          "stopLoss": 688.37,
+          "confidence": 80.93,
+          "upsidePct": 20.16
+        }
+      ],
+      "spark": [
+        682.85,
+        687.35,
+        686.38,
+        678.27,
+        662.29,
+        648.57,
+        634.09,
+        655.83,
+        679.46,
+        701.66,
+        708.45,
+        718.66,
+        733.83,
+        742.31,
+        733.73,
+        750.46,
+        759.57,
+        737.05,
+        750.33,
+        733.58,
+        746.77,
+        747.71,
+        751.83,
+        748.28,
+        739.09,
+        757.67,
+        773.26,
+        776.34
       ]
     },
     {
       "symbol": "QQQ",
-      "price": 729.6,
+      "price": 731.07,
       "changePct": 0,
-      "score": 48.56,
+      "score": 48.83,
       "risk": "low",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:27Z",
-      "thesis": "20d 3.4%, 60d 4.0%, realized vol 23.7%",
+      "updatedAt": "2026-08-14T22:32:42Z",
+      "thesis": "20d 3.6%, 60d 4.2%, realized vol 23.6%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 739.55,
+          "targetPrice": 741.13,
           "quantity": 20,
-          "profitLoss": 199,
-          "stopLoss": 708.9,
-          "confidence": 67.19,
-          "upsidePct": 1.36
+          "profitLoss": 201.2,
+          "stopLoss": 710.38,
+          "confidence": 67.21,
+          "upsidePct": 1.38
         },
         {
           "horizon": "1 month",
-          "targetPrice": 753.07,
+          "targetPrice": 755,
           "quantity": 20,
-          "profitLoss": 469.4,
-          "stopLoss": 687.18,
-          "confidence": 67.83,
-          "upsidePct": 3.22
+          "profitLoss": 478.6,
+          "stopLoss": 688.66,
+          "confidence": 67.85,
+          "upsidePct": 3.27
         },
         {
           "horizon": "3 months",
-          "targetPrice": 778.01,
+          "targetPrice": 780.9,
           "quantity": 20,
-          "profitLoss": 968.2,
-          "stopLoss": 656.12,
-          "confidence": 69.5,
-          "upsidePct": 6.64
+          "profitLoss": 996.6,
+          "stopLoss": 657.61,
+          "confidence": 69.52,
+          "upsidePct": 6.82
         },
         {
           "horizon": "6 months",
-          "targetPrice": 809.15,
+          "targetPrice": 813.54,
           "quantity": 20,
-          "profitLoss": 1591,
-          "stopLoss": 625.69,
-          "confidence": 72,
-          "upsidePct": 10.9
+          "profitLoss": 1649.4,
+          "stopLoss": 627.19,
+          "confidence": 72.02,
+          "upsidePct": 11.28
         },
         {
           "horizon": "12 months",
-          "targetPrice": 865.49,
+          "targetPrice": 873.12,
           "quantity": 20,
-          "profitLoss": 2717.8,
-          "stopLoss": 582.64,
-          "confidence": 77,
-          "upsidePct": 18.63
+          "profitLoss": 2841,
+          "stopLoss": 584.16,
+          "confidence": 77.02,
+          "upsidePct": 19.43
         }
       ],
       "spark": [
@@ -608,63 +608,63 @@
         682.12,
         700.07,
         723.03,
-        729.6
+        731.07
       ]
     },
     {
       "symbol": "NVDA",
-      "price": 225.19,
+      "price": 225.16,
       "changePct": 0,
-      "score": 48.23,
+      "score": 48.22,
       "risk": "medium",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:22Z",
-      "thesis": "20d 8.6%, 60d 2.1%, realized vol 38.2%",
+      "updatedAt": "2026-08-14T22:32:38Z",
+      "thesis": "20d 8.6%, 60d 2.1%, realized vol 38.3%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 230.04,
+          "targetPrice": 230.01,
           "quantity": 20,
           "profitLoss": 97,
-          "stopLoss": 214.88,
+          "stopLoss": 214.85,
           "confidence": 61.66,
           "upsidePct": 2.15
         },
         {
           "horizon": "1 month",
-          "targetPrice": 236.46,
+          "targetPrice": 236.42,
           "quantity": 20,
-          "profitLoss": 225.4,
-          "stopLoss": 204.06,
+          "profitLoss": 225.2,
+          "stopLoss": 204.03,
           "confidence": 62.3,
           "upsidePct": 5
         },
         {
           "horizon": "3 months",
-          "targetPrice": 248.05,
+          "targetPrice": 247.99,
           "quantity": 20,
-          "profitLoss": 457.2,
-          "stopLoss": 188.58,
-          "confidence": 63.97,
-          "upsidePct": 10.15
+          "profitLoss": 456.6,
+          "stopLoss": 188.56,
+          "confidence": 63.96,
+          "upsidePct": 10.14
         },
         {
           "horizon": "6 months",
-          "targetPrice": 262.36,
+          "targetPrice": 262.26,
           "quantity": 20,
-          "profitLoss": 743.4,
-          "stopLoss": 173.42,
-          "confidence": 66.47,
-          "upsidePct": 16.51
+          "profitLoss": 742,
+          "stopLoss": 173.4,
+          "confidence": 66.46,
+          "upsidePct": 16.48
         },
         {
           "horizon": "12 months",
-          "targetPrice": 288.15,
+          "targetPrice": 287.99,
           "quantity": 20,
-          "profitLoss": 1259.2,
-          "stopLoss": 162.14,
-          "confidence": 71.47,
-          "upsidePct": 27.96
+          "profitLoss": 1256.6,
+          "stopLoss": 162.12,
+          "confidence": 71.46,
+          "upsidePct": 27.9
         }
       ],
       "spark": [
@@ -695,63 +695,63 @@
         196.51,
         206.64,
         223.96,
-        225.19
+        225.16
       ]
     },
     {
       "symbol": "ORCL",
-      "price": 149.33,
+      "price": 150.52,
       "changePct": 0,
-      "score": 41.96,
+      "score": 43.22,
       "risk": "high",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:27Z",
-      "thesis": "20d 20.2%, 60d -17.7%, realized vol 65.0%",
+      "updatedAt": "2026-08-14T22:32:43Z",
+      "thesis": "20d 21.2%, 60d -17.1%, realized vol 64.2%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 154.01,
+          "targetPrice": 155.28,
           "quantity": 20,
-          "profitLoss": 93.6,
-          "stopLoss": 137.71,
-          "confidence": 51.5,
-          "upsidePct": 3.13
+          "profitLoss": 95.2,
+          "stopLoss": 138.95,
+          "confidence": 51.81,
+          "upsidePct": 3.16
         },
         {
           "horizon": "1 month",
-          "targetPrice": 158.71,
+          "targetPrice": 160.28,
           "quantity": 20,
-          "profitLoss": 187.6,
-          "stopLoss": 125.51,
-          "confidence": 52.13,
-          "upsidePct": 6.28
+          "profitLoss": 195.2,
+          "stopLoss": 126.81,
+          "confidence": 52.44,
+          "upsidePct": 6.48
         },
         {
           "horizon": "3 months",
-          "targetPrice": 165.04,
+          "targetPrice": 167.43,
           "quantity": 20,
-          "profitLoss": 314.2,
-          "stopLoss": 108.08,
-          "confidence": 53.8,
-          "upsidePct": 10.52
+          "profitLoss": 338.2,
+          "stopLoss": 109.46,
+          "confidence": 54.11,
+          "upsidePct": 11.23
         },
         {
           "horizon": "6 months",
-          "targetPrice": 170.8,
+          "targetPrice": 174.44,
           "quantity": 20,
-          "profitLoss": 429.4,
-          "stopLoss": 107.52,
-          "confidence": 56.3,
-          "upsidePct": 14.38
+          "profitLoss": 478.4,
+          "stopLoss": 108.37,
+          "confidence": 56.61,
+          "upsidePct": 15.89
         },
         {
           "horizon": "12 months",
-          "targetPrice": 178.25,
+          "targetPrice": 184.35,
           "quantity": 20,
-          "profitLoss": 578.4,
-          "stopLoss": 107.52,
-          "confidence": 61.3,
-          "upsidePct": 19.37
+          "profitLoss": 676.6,
+          "stopLoss": 108.37,
+          "confidence": 61.61,
+          "upsidePct": 22.48
         }
       ],
       "spark": [
@@ -782,324 +782,63 @@
         119.9,
         141.85,
         147.02,
-        149.33
-      ]
-    },
-    {
-      "symbol": "HOOD",
-      "price": 95.6,
-      "changePct": 0,
-      "score": 41.65,
-      "risk": "high",
-      "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:26Z",
-      "thesis": "20d -9.8%, 60d 28.9%, realized vol 54.0%",
-      "targets": [
-        {
-          "horizon": "1 week",
-          "targetPrice": 98.24,
-          "quantity": 20,
-          "profitLoss": 52.82,
-          "stopLoss": 89.42,
-          "confidence": 55.68,
-          "upsidePct": 2.76
-        },
-        {
-          "horizon": "1 month",
-          "targetPrice": 101.23,
-          "quantity": 20,
-          "profitLoss": 112.62,
-          "stopLoss": 82.93,
-          "confidence": 56.32,
-          "upsidePct": 5.89
-        },
-        {
-          "horizon": "3 months",
-          "targetPrice": 105.9,
-          "quantity": 20,
-          "profitLoss": 206.02,
-          "stopLoss": 73.66,
-          "confidence": 57.98,
-          "upsidePct": 10.78
-        },
-        {
-          "horizon": "6 months",
-          "targetPrice": 110.92,
-          "quantity": 20,
-          "profitLoss": 306.42,
-          "stopLoss": 68.83,
-          "confidence": 60.48,
-          "upsidePct": 16.03
-        },
-        {
-          "horizon": "12 months",
-          "targetPrice": 118.82,
-          "quantity": 20,
-          "profitLoss": 464.42,
-          "stopLoss": 68.83,
-          "confidence": 65.48,
-          "upsidePct": 24.29
-        }
-      ],
-      "spark": [
-        75.44,
-        73.39,
-        78.78,
-        79.35,
-        73.39,
-        70.89,
-        66.02,
-        68.9,
-        69.19,
-        86.85,
-        83.54,
-        72.89,
-        79.05,
-        76.75,
-        74.16,
-        76.23,
-        88.16,
-        83.77,
-        96.71,
-        103.25,
-        100.28,
-        112.9,
-        113.45,
-        106.36,
-        95.65,
-        90.34,
-        93.29,
-        95.6
-      ]
-    },
-    {
-      "symbol": "UBER",
-      "price": 75.98,
-      "changePct": 0,
-      "score": 41.4,
-      "risk": "medium",
-      "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:26Z",
-      "thesis": "20d 2.6%, 60d 2.6%, realized vol 47.4%",
-      "targets": [
-        {
-          "horizon": "1 week",
-          "targetPrice": 77.72,
-          "quantity": 20,
-          "profitLoss": 34.8,
-          "stopLoss": 71.67,
-          "confidence": 58.19,
-          "upsidePct": 2.29
-        },
-        {
-          "horizon": "1 month",
-          "targetPrice": 79.48,
-          "quantity": 20,
-          "profitLoss": 70,
-          "stopLoss": 67.14,
-          "confidence": 58.82,
-          "upsidePct": 4.61
-        },
-        {
-          "horizon": "3 months",
-          "targetPrice": 81.87,
-          "quantity": 20,
-          "profitLoss": 117.8,
-          "stopLoss": 60.68,
-          "confidence": 60.49,
-          "upsidePct": 7.75
-        },
-        {
-          "horizon": "6 months",
-          "targetPrice": 84.08,
-          "quantity": 20,
-          "profitLoss": 162,
-          "stopLoss": 54.71,
-          "confidence": 62.99,
-          "upsidePct": 10.66
-        },
-        {
-          "horizon": "12 months",
-          "targetPrice": 86.96,
-          "quantity": 20,
-          "profitLoss": 219.6,
-          "stopLoss": 54.71,
-          "confidence": 67.99,
-          "upsidePct": 14.45
-        }
-      ],
-      "spark": [
-        70.53,
-        71.38,
-        75.95,
-        73.84,
-        73.33,
-        73.89,
-        69.18,
-        71.84,
-        70.48,
-        76.48,
-        74.7,
-        74.61,
-        79.17,
-        74.7,
-        74.09,
-        70.73,
-        71.62,
-        70.38,
-        73.25,
-        69.67,
-        72.16,
-        74.33,
-        72.08,
-        71.55,
-        68.18,
-        71.61,
-        75.02,
-        75.98
-      ]
-    },
-    {
-      "symbol": "NFLX",
-      "price": 78.02,
-      "changePct": 0,
-      "score": 40.91,
-      "risk": "medium",
-      "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:24Z",
-      "thesis": "20d 4.9%, 60d -12.7%, realized vol 29.3%",
-      "targets": [
-        {
-          "horizon": "1 week",
-          "targetPrice": 78.96,
-          "quantity": 20,
-          "profitLoss": 18.9,
-          "stopLoss": 75.28,
-          "confidence": 65.06,
-          "upsidePct": 1.21
-        },
-        {
-          "horizon": "1 month",
-          "targetPrice": 79.57,
-          "quantity": 20,
-          "profitLoss": 31.1,
-          "stopLoss": 72.4,
-          "confidence": 65.69,
-          "upsidePct": 1.99
-        },
-        {
-          "horizon": "3 months",
-          "targetPrice": 79.77,
-          "quantity": 20,
-          "profitLoss": 35.1,
-          "stopLoss": 68.3,
-          "confidence": 67.36,
-          "upsidePct": 2.25
-        },
-        {
-          "horizon": "6 months",
-          "targetPrice": 79.25,
-          "quantity": 20,
-          "profitLoss": 24.7,
-          "stopLoss": 64.27,
-          "confidence": 69.86,
-          "upsidePct": 1.58
-        },
-        {
-          "horizon": "12 months",
-          "targetPrice": 77.42,
-          "quantity": 20,
-          "profitLoss": -11.9,
-          "stopLoss": 58.58,
-          "confidence": 74.86,
-          "upsidePct": -0.76
-        }
-      ],
-      "spark": [
-        77,
-        78.04,
-        97.09,
-        98.32,
-        95.31,
-        91.82,
-        93.43,
-        98.66,
-        103.01,
-        107.79,
-        92.82,
-        93.61,
-        88.27,
-        87.56,
-        89.33,
-        87.35,
-        83.33,
-        81.41,
-        78.72,
-        72.82,
-        71.4,
-        76.18,
-        73.53,
-        68.67,
-        70.4,
-        73.33,
-        74.14,
-        78.01
+        150.52
       ]
     },
     {
       "symbol": "AMD",
-      "price": 507.59,
+      "price": 514.39,
       "changePct": 0,
-      "score": 40.66,
+      "score": 42.19,
       "risk": "high",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:24Z",
-      "thesis": "20d 1.3%, 60d 22.6%, realized vol 82.3%",
+      "updatedAt": "2026-08-14T22:32:39Z",
+      "thesis": "20d 2.7%, 60d 24.2%, realized vol 83.5%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 528.24,
+          "targetPrice": 536.04,
           "quantity": 20,
-          "profitLoss": 413,
-          "stopLoss": 457.58,
-          "confidence": 44.93,
-          "upsidePct": 4.07
+          "profitLoss": 433,
+          "stopLoss": 462.99,
+          "confidence": 44.49,
+          "upsidePct": 4.21
         },
         {
           "horizon": "1 month",
-          "targetPrice": 550.03,
+          "targetPrice": 559.8,
           "quantity": 20,
-          "profitLoss": 848.8,
-          "stopLoss": 405.1,
-          "confidence": 45.56,
-          "upsidePct": 8.36
+          "profitLoss": 908.2,
+          "stopLoss": 409.06,
+          "confidence": 45.12,
+          "upsidePct": 8.83
         },
         {
           "horizon": "3 months",
-          "targetPrice": 581.4,
+          "targetPrice": 595.65,
           "quantity": 20,
-          "profitLoss": 1476.2,
-          "stopLoss": 365.46,
-          "confidence": 47.23,
-          "upsidePct": 14.54
+          "profitLoss": 1625.2,
+          "stopLoss": 370.36,
+          "confidence": 46.79,
+          "upsidePct": 15.8
         },
         {
           "horizon": "6 months",
-          "targetPrice": 612.38,
+          "targetPrice": 632.98,
           "quantity": 20,
-          "profitLoss": 2095.8,
-          "stopLoss": 365.46,
-          "confidence": 49.73,
-          "upsidePct": 20.64
+          "profitLoss": 2371.8,
+          "stopLoss": 370.36,
+          "confidence": 49.29,
+          "upsidePct": 23.05
         },
         {
           "horizon": "12 months",
-          "targetPrice": 656.63,
+          "targetPrice": 689.62,
           "quantity": 20,
-          "profitLoss": 2980.8,
-          "stopLoss": 365.46,
-          "confidence": 54.73,
-          "upsidePct": 29.36
+          "profitLoss": 3504.6,
+          "stopLoss": 370.36,
+          "confidence": 54.29,
+          "upsidePct": 34.07
         }
       ],
       "spark": [
@@ -1130,63 +869,237 @@
         494.95,
         484.64,
         483.36,
-        507.59
+        514.39
+      ]
+    },
+    {
+      "symbol": "HOOD",
+      "price": 95.56,
+      "changePct": 0,
+      "score": 41.59,
+      "risk": "high",
+      "source": "yahoo_public",
+      "updatedAt": "2026-08-14T22:32:41Z",
+      "thesis": "20d -9.9%, 60d 28.9%, realized vol 54.0%",
+      "targets": [
+        {
+          "horizon": "1 week",
+          "targetPrice": 98.2,
+          "quantity": 20,
+          "profitLoss": 52.8,
+          "stopLoss": 89.38,
+          "confidence": 55.67,
+          "upsidePct": 2.76
+        },
+        {
+          "horizon": "1 month",
+          "targetPrice": 101.18,
+          "quantity": 20,
+          "profitLoss": 112.4,
+          "stopLoss": 82.89,
+          "confidence": 56.3,
+          "upsidePct": 5.88
+        },
+        {
+          "horizon": "3 months",
+          "targetPrice": 105.82,
+          "quantity": 20,
+          "profitLoss": 205.2,
+          "stopLoss": 73.62,
+          "confidence": 57.97,
+          "upsidePct": 10.74
+        },
+        {
+          "horizon": "6 months",
+          "targetPrice": 110.8,
+          "quantity": 20,
+          "profitLoss": 304.8,
+          "stopLoss": 68.8,
+          "confidence": 60.47,
+          "upsidePct": 15.95
+        },
+        {
+          "horizon": "12 months",
+          "targetPrice": 118.62,
+          "quantity": 20,
+          "profitLoss": 461.2,
+          "stopLoss": 68.8,
+          "confidence": 65.47,
+          "upsidePct": 24.13
+        }
+      ],
+      "spark": [
+        75.44,
+        73.39,
+        78.78,
+        79.35,
+        73.39,
+        70.89,
+        66.02,
+        68.9,
+        69.19,
+        86.85,
+        83.54,
+        72.89,
+        79.05,
+        76.75,
+        74.16,
+        76.23,
+        88.16,
+        83.77,
+        96.71,
+        103.25,
+        100.28,
+        112.9,
+        113.45,
+        106.36,
+        95.65,
+        90.34,
+        93.29,
+        95.56
+      ]
+    },
+    {
+      "symbol": "UBER",
+      "price": 75.95,
+      "changePct": 0,
+      "score": 41.35,
+      "risk": "medium",
+      "source": "yahoo_public",
+      "updatedAt": "2026-08-14T22:32:42Z",
+      "thesis": "20d 2.6%, 60d 2.5%, realized vol 47.4%",
+      "targets": [
+        {
+          "horizon": "1 week",
+          "targetPrice": 77.69,
+          "quantity": 20,
+          "profitLoss": 34.8,
+          "stopLoss": 71.64,
+          "confidence": 58.19,
+          "upsidePct": 2.29
+        },
+        {
+          "horizon": "1 month",
+          "targetPrice": 79.44,
+          "quantity": 20,
+          "profitLoss": 69.8,
+          "stopLoss": 67.12,
+          "confidence": 58.82,
+          "upsidePct": 4.6
+        },
+        {
+          "horizon": "3 months",
+          "targetPrice": 81.81,
+          "quantity": 20,
+          "profitLoss": 117.2,
+          "stopLoss": 60.65,
+          "confidence": 60.49,
+          "upsidePct": 7.72
+        },
+        {
+          "horizon": "6 months",
+          "targetPrice": 83.99,
+          "quantity": 20,
+          "profitLoss": 160.8,
+          "stopLoss": 54.68,
+          "confidence": 62.99,
+          "upsidePct": 10.59
+        },
+        {
+          "horizon": "12 months",
+          "targetPrice": 86.82,
+          "quantity": 20,
+          "profitLoss": 217.4,
+          "stopLoss": 54.68,
+          "confidence": 67.99,
+          "upsidePct": 14.31
+        }
+      ],
+      "spark": [
+        70.53,
+        71.38,
+        75.95,
+        73.84,
+        73.33,
+        73.89,
+        69.18,
+        71.84,
+        70.48,
+        76.48,
+        74.7,
+        74.61,
+        79.17,
+        74.7,
+        74.09,
+        70.73,
+        71.62,
+        70.38,
+        73.25,
+        69.67,
+        72.16,
+        74.33,
+        72.08,
+        71.55,
+        68.18,
+        71.61,
+        75.02,
+        75.95
       ]
     },
     {
       "symbol": "AVGO",
-      "price": 390.26,
+      "price": 392.99,
       "changePct": 0,
-      "score": 40.02,
+      "score": 41.26,
       "risk": "medium",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:24Z",
-      "thesis": "20d 4.2%, 60d -5.1%, realized vol 44.3%",
+      "updatedAt": "2026-08-14T22:32:40Z",
+      "thesis": "20d 5.0%, 60d -4.4%, realized vol 42.9%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 398.17,
+          "targetPrice": 400.91,
           "quantity": 20,
-          "profitLoss": 158.2,
-          "stopLoss": 369.55,
-          "confidence": 59.36,
-          "upsidePct": 2.03
+          "profitLoss": 158.4,
+          "stopLoss": 372.81,
+          "confidence": 59.9,
+          "upsidePct": 2.02
         },
         {
           "horizon": "1 month",
-          "targetPrice": 405.13,
+          "targetPrice": 408.4,
           "quantity": 20,
-          "profitLoss": 297.4,
-          "stopLoss": 347.82,
-          "confidence": 59.99,
-          "upsidePct": 3.81
+          "profitLoss": 308.2,
+          "stopLoss": 351.63,
+          "confidence": 60.53,
+          "upsidePct": 3.92
         },
         {
           "horizon": "3 months",
-          "targetPrice": 412.76,
+          "targetPrice": 417.65,
           "quantity": 20,
-          "profitLoss": 450,
-          "stopLoss": 316.75,
-          "confidence": 61.66,
-          "upsidePct": 5.77
+          "profitLoss": 493.2,
+          "stopLoss": 321.35,
+          "confidence": 62.2,
+          "upsidePct": 6.27
         },
         {
           "horizon": "6 months",
-          "targetPrice": 417.69,
+          "targetPrice": 425.08,
           "quantity": 20,
-          "profitLoss": 548.6,
-          "stopLoss": 286.3,
-          "confidence": 64.16,
-          "upsidePct": 7.03
+          "profitLoss": 641.8,
+          "stopLoss": 291.68,
+          "confidence": 64.7,
+          "upsidePct": 8.17
         },
         {
           "horizon": "12 months",
-          "targetPrice": 420.64,
+          "targetPrice": 432.98,
           "quantity": 20,
-          "profitLoss": 607.6,
-          "stopLoss": 280.99,
-          "confidence": 69.16,
-          "upsidePct": 7.78
+          "profitLoss": 799.8,
+          "stopLoss": 282.95,
+          "confidence": 69.7,
+          "upsidePct": 10.18
         }
       ],
       "spark": [
@@ -1217,63 +1130,150 @@
         383.22,
         392.23,
         427.76,
-        390.26
+        392.99
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "price": 78.16,
+      "changePct": 0,
+      "score": 41.16,
+      "risk": "medium",
+      "source": "yahoo_public",
+      "updatedAt": "2026-08-14T22:32:40Z",
+      "thesis": "20d 5.1%, 60d -12.5%, realized vol 29.2%",
+      "targets": [
+        {
+          "horizon": "1 week",
+          "targetPrice": 79.12,
+          "quantity": 20,
+          "profitLoss": 19.2,
+          "stopLoss": 75.42,
+          "confidence": 65.09,
+          "upsidePct": 1.23
+        },
+        {
+          "horizon": "1 month",
+          "targetPrice": 79.75,
+          "quantity": 20,
+          "profitLoss": 31.8,
+          "stopLoss": 72.55,
+          "confidence": 65.72,
+          "upsidePct": 2.03
+        },
+        {
+          "horizon": "3 months",
+          "targetPrice": 80.04,
+          "quantity": 20,
+          "profitLoss": 37.6,
+          "stopLoss": 68.45,
+          "confidence": 67.39,
+          "upsidePct": 2.41
+        },
+        {
+          "horizon": "6 months",
+          "targetPrice": 79.63,
+          "quantity": 20,
+          "profitLoss": 29.4,
+          "stopLoss": 64.42,
+          "confidence": 69.89,
+          "upsidePct": 1.88
+        },
+        {
+          "horizon": "12 months",
+          "targetPrice": 78,
+          "quantity": 20,
+          "profitLoss": -3.2,
+          "stopLoss": 58.73,
+          "confidence": 74.89,
+          "upsidePct": -0.2
+        }
+      ],
+      "spark": [
+        77,
+        78.04,
+        97.09,
+        98.32,
+        95.31,
+        91.82,
+        93.43,
+        98.66,
+        103.01,
+        107.79,
+        92.82,
+        93.61,
+        88.27,
+        87.56,
+        89.33,
+        87.35,
+        83.33,
+        81.41,
+        78.72,
+        72.82,
+        71.4,
+        76.18,
+        73.53,
+        68.67,
+        70.4,
+        73.33,
+        74.14,
+        78.16
       ]
     },
     {
       "symbol": "AMZN",
-      "price": 262.93,
+      "price": 262.65,
       "changePct": 0,
-      "score": 39.41,
+      "score": 39.27,
       "risk": "high",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:23Z",
-      "thesis": "20d 5.2%, 60d 1.4%, realized vol 61.5%",
+      "updatedAt": "2026-08-14T22:32:39Z",
+      "thesis": "20d 5.1%, 60d 1.3%, realized vol 61.6%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 270.59,
+          "targetPrice": 270.29,
           "quantity": 20,
-          "profitLoss": 153.2,
-          "stopLoss": 243.56,
-          "confidence": 52.82,
+          "profitLoss": 152.8,
+          "stopLoss": 243.29,
+          "confidence": 52.81,
           "upsidePct": 2.91
         },
         {
           "horizon": "1 month",
-          "targetPrice": 277.96,
+          "targetPrice": 277.58,
           "quantity": 20,
-          "profitLoss": 300.6,
-          "stopLoss": 223.23,
-          "confidence": 53.45,
-          "upsidePct": 5.72
+          "profitLoss": 298.6,
+          "stopLoss": 222.98,
+          "confidence": 53.44,
+          "upsidePct": 5.68
         },
         {
           "horizon": "3 months",
-          "targetPrice": 287.31,
+          "targetPrice": 286.75,
           "quantity": 20,
-          "profitLoss": 487.6,
-          "stopLoss": 194.17,
-          "confidence": 55.12,
-          "upsidePct": 9.27
+          "profitLoss": 482,
+          "stopLoss": 193.94,
+          "confidence": 55.11,
+          "upsidePct": 9.18
         },
         {
           "horizon": "6 months",
-          "targetPrice": 295.16,
+          "targetPrice": 294.35,
           "quantity": 20,
-          "profitLoss": 644.6,
-          "stopLoss": 189.31,
-          "confidence": 57.62,
-          "upsidePct": 12.26
+          "profitLoss": 634,
+          "stopLoss": 189.11,
+          "confidence": 57.61,
+          "upsidePct": 12.07
         },
         {
           "horizon": "12 months",
-          "targetPrice": 304.16,
+          "targetPrice": 302.86,
           "quantity": 20,
-          "profitLoss": 824.6,
-          "stopLoss": 189.31,
-          "confidence": 62.62,
-          "upsidePct": 15.68
+          "profitLoss": 804.2,
+          "stopLoss": 189.11,
+          "confidence": 62.61,
+          "upsidePct": 15.31
         }
       ],
       "spark": [
@@ -1304,63 +1304,63 @@
         231.39,
         284.02,
         274.48,
-        262.93
+        262.65
       ]
     },
     {
       "symbol": "AAPL",
-      "price": 305.64,
+      "price": 305.93,
       "changePct": 0,
-      "score": 35.68,
+      "score": 35.79,
       "risk": "medium",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:23Z",
-      "thesis": "20d -8.3%, 60d 2.2%, realized vol 34.8%",
+      "updatedAt": "2026-08-14T22:32:38Z",
+      "thesis": "20d -8.2%, 60d 2.3%, realized vol 34.8%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 309.65,
+          "targetPrice": 309.96,
           "quantity": 20,
-          "profitLoss": 80.2,
-          "stopLoss": 292.92,
-          "confidence": 62.99,
-          "upsidePct": 1.31
+          "profitLoss": 80.6,
+          "stopLoss": 293.19,
+          "confidence": 62.98,
+          "upsidePct": 1.32
         },
         {
           "horizon": "1 month",
-          "targetPrice": 311.24,
+          "targetPrice": 311.62,
           "quantity": 20,
-          "profitLoss": 112,
-          "stopLoss": 279.57,
-          "confidence": 63.63,
-          "upsidePct": 1.83
+          "profitLoss": 113.8,
+          "stopLoss": 279.82,
+          "confidence": 63.62,
+          "upsidePct": 1.86
         },
         {
           "horizon": "3 months",
-          "targetPrice": 309.09,
+          "targetPrice": 309.62,
           "quantity": 20,
-          "profitLoss": 69,
-          "stopLoss": 260.49,
-          "confidence": 65.29,
-          "upsidePct": 1.13
+          "profitLoss": 73.8,
+          "stopLoss": 260.71,
+          "confidence": 65.28,
+          "upsidePct": 1.21
         },
         {
           "horizon": "6 months",
-          "targetPrice": 302.4,
+          "targetPrice": 303.14,
           "quantity": 20,
-          "profitLoss": -64.8,
-          "stopLoss": 241.79,
-          "confidence": 67.79,
-          "upsidePct": -1.06
+          "profitLoss": -55.8,
+          "stopLoss": 241.98,
+          "confidence": 67.78,
+          "upsidePct": -0.91
         },
         {
           "horizon": "12 months",
-          "targetPrice": 286.62,
+          "targetPrice": 287.69,
           "quantity": 20,
-          "profitLoss": -380.4,
-          "stopLoss": 220.06,
-          "confidence": 72.79,
-          "upsidePct": -6.22
+          "profitLoss": -364.8,
+          "stopLoss": 220.27,
+          "confidence": 72.78,
+          "upsidePct": -5.96
         }
       ],
       "spark": [
@@ -1391,63 +1391,63 @@
         336.91,
         303.42,
         313.33,
-        305.64
+        305.93
       ]
     },
     {
       "symbol": "GOOGL",
-      "price": 345.61,
+      "price": 345.9,
       "changePct": 0,
-      "score": 31.08,
+      "score": 31.18,
       "risk": "medium",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:24Z",
-      "thesis": "20d -2.5%, 60d -10.8%, realized vol 48.2%",
+      "updatedAt": "2026-08-14T22:32:39Z",
+      "thesis": "20d -2.4%, 60d -10.8%, realized vol 48.2%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 351.63,
+          "targetPrice": 351.94,
           "quantity": 20,
-          "profitLoss": 120.4,
-          "stopLoss": 325.67,
+          "profitLoss": 120.8,
+          "stopLoss": 325.95,
           "confidence": 57.89,
-          "upsidePct": 1.74
+          "upsidePct": 1.75
         },
         {
           "horizon": "1 month",
-          "targetPrice": 353.33,
+          "targetPrice": 353.7,
           "quantity": 20,
-          "profitLoss": 154.4,
-          "stopLoss": 304.75,
-          "confidence": 58.52,
-          "upsidePct": 2.23
+          "profitLoss": 156,
+          "stopLoss": 305.01,
+          "confidence": 58.53,
+          "upsidePct": 2.25
         },
         {
           "horizon": "3 months",
-          "targetPrice": 348.15,
+          "targetPrice": 348.66,
           "quantity": 20,
-          "profitLoss": 50.8,
-          "stopLoss": 274.84,
+          "profitLoss": 55.2,
+          "stopLoss": 275.07,
           "confidence": 60.19,
-          "upsidePct": 0.73
+          "upsidePct": 0.8
         },
         {
           "horizon": "6 months",
-          "targetPrice": 335.67,
+          "targetPrice": 336.36,
           "quantity": 20,
-          "profitLoss": -198.8,
-          "stopLoss": 248.84,
+          "profitLoss": -190.8,
+          "stopLoss": 249.05,
           "confidence": 62.69,
-          "upsidePct": -2.88
+          "upsidePct": -2.76
         },
         {
           "horizon": "12 months",
-          "targetPrice": 309.15,
+          "targetPrice": 310.11,
           "quantity": 20,
-          "profitLoss": -729.2,
-          "stopLoss": 248.84,
+          "profitLoss": -715.8,
+          "stopLoss": 249.05,
           "confidence": 67.69,
-          "upsidePct": -10.55
+          "upsidePct": -10.35
         }
       ],
       "spark": [
@@ -1478,62 +1478,62 @@
         326.56,
         373.51,
         354.3,
-        345.61
+        345.9
       ]
     },
     {
       "symbol": "META",
-      "price": 591.6,
+      "price": 589.85,
       "changePct": 0,
-      "score": 29.1,
+      "score": 28.75,
       "risk": "medium",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:22Z",
-      "thesis": "20d -11.0%, 60d -1.8%, realized vol 45.2%",
+      "updatedAt": "2026-08-14T22:32:38Z",
+      "thesis": "20d -11.2%, 60d -2.1%, realized vol 45.2%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 600.66,
+          "targetPrice": 598.89,
           "quantity": 20,
-          "profitLoss": 181.2,
-          "stopLoss": 559.59,
-          "confidence": 59.03,
+          "profitLoss": 180.8,
+          "stopLoss": 557.92,
+          "confidence": 59.02,
           "upsidePct": 1.53
         },
         {
           "horizon": "1 month",
-          "targetPrice": 601.5,
+          "targetPrice": 599.73,
           "quantity": 20,
-          "profitLoss": 198,
-          "stopLoss": 526,
-          "confidence": 59.66,
-          "upsidePct": 1.67
+          "profitLoss": 197.6,
+          "stopLoss": 524.41,
+          "confidence": 59.65,
+          "upsidePct": 1.68
         },
         {
           "horizon": "3 months",
-          "targetPrice": 588.53,
+          "targetPrice": 586.8,
           "quantity": 20,
-          "profitLoss": -61.4,
-          "stopLoss": 477.98,
-          "confidence": 61.33,
+          "profitLoss": -61,
+          "stopLoss": 476.51,
+          "confidence": 61.32,
           "upsidePct": -0.52
         },
         {
           "horizon": "6 months",
-          "targetPrice": 562.26,
+          "targetPrice": 560.61,
           "quantity": 20,
-          "profitLoss": -586.8,
-          "stopLoss": 430.92,
-          "confidence": 63.83,
+          "profitLoss": -584.8,
+          "stopLoss": 429.56,
+          "confidence": 63.82,
           "upsidePct": -4.96
         },
         {
           "horizon": "12 months",
-          "targetPrice": 509.59,
+          "targetPrice": 508.08,
           "quantity": 20,
-          "profitLoss": -1640.2,
-          "stopLoss": 425.95,
-          "confidence": 68.83,
+          "profitLoss": -1635.4,
+          "stopLoss": 424.69,
+          "confidence": 68.82,
           "upsidePct": -13.86
         }
       ],
@@ -1565,63 +1565,63 @@
         593.87,
         590.24,
         592.1,
-        591.6
+        589.85
       ]
     },
     {
       "symbol": "TSLA",
-      "price": 340.96,
+      "price": 342.27,
       "changePct": 0,
-      "score": 16.22,
+      "score": 16.62,
       "risk": "high",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:23Z",
-      "thesis": "20d -12.8%, 60d -15.6%, realized vol 66.0%",
+      "updatedAt": "2026-08-14T22:32:38Z",
+      "thesis": "20d -12.5%, 60d -15.3%, realized vol 66.1%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 348.9,
+          "targetPrice": 350.25,
           "quantity": 20,
-          "profitLoss": 158.8,
-          "stopLoss": 314.02,
-          "confidence": 51.12,
+          "profitLoss": 159.6,
+          "stopLoss": 315.2,
+          "confidence": 51.09,
           "upsidePct": 2.33
         },
         {
           "horizon": "1 month",
-          "targetPrice": 350.66,
+          "targetPrice": 352.02,
           "quantity": 20,
-          "profitLoss": 194,
-          "stopLoss": 285.75,
-          "confidence": 51.76,
-          "upsidePct": 2.84
+          "profitLoss": 195,
+          "stopLoss": 286.78,
+          "confidence": 51.73,
+          "upsidePct": 2.85
         },
         {
           "horizon": "3 months",
-          "targetPrice": 342.71,
+          "targetPrice": 344.03,
           "quantity": 20,
-          "profitLoss": 35,
-          "stopLoss": 245.49,
-          "confidence": 53.42,
+          "profitLoss": 35.2,
+          "stopLoss": 246.43,
+          "confidence": 53.39,
           "upsidePct": 0.51
         },
         {
           "horizon": "6 months",
-          "targetPrice": 325.54,
+          "targetPrice": 326.79,
           "quantity": 20,
-          "profitLoss": -308.4,
-          "stopLoss": 245.49,
-          "confidence": 55.92,
+          "profitLoss": -309.6,
+          "stopLoss": 246.43,
+          "confidence": 55.89,
           "upsidePct": -4.52
         },
         {
           "horizon": "12 months",
-          "targetPrice": 292.33,
+          "targetPrice": 293.44,
           "quantity": 20,
-          "profitLoss": -972.6,
-          "stopLoss": 245.49,
-          "confidence": 60.92,
-          "upsidePct": -14.26
+          "profitLoss": -976.6,
+          "stopLoss": 246.43,
+          "confidence": 60.89,
+          "upsidePct": -14.27
         }
       ],
       "spark": [
@@ -1652,62 +1652,62 @@
         309.22,
         322.08,
         328.58,
-        340.96
+        342.27
       ]
     },
     {
       "symbol": "COIN",
-      "price": 148.37,
+      "price": 148.47,
       "changePct": 0,
-      "score": 15.3,
+      "score": 15.38,
       "risk": "high",
       "source": "yahoo_public",
-      "updatedAt": "2026-08-14T19:05:25Z",
-      "thesis": "20d -7.6%, 60d -23.3%, realized vol 72.7%",
+      "updatedAt": "2026-08-14T22:32:41Z",
+      "thesis": "20d -7.5%, 60d -23.3%, realized vol 72.6%",
       "targets": [
         {
           "horizon": "1 week",
-          "targetPrice": 152.18,
+          "targetPrice": 152.28,
           "quantity": 20,
-          "profitLoss": 76.3,
-          "stopLoss": 135.45,
-          "confidence": 48.58,
+          "profitLoss": 76.2,
+          "stopLoss": 135.56,
+          "confidence": 48.59,
           "upsidePct": 2.57
         },
         {
           "horizon": "1 month",
-          "targetPrice": 153.04,
+          "targetPrice": 153.14,
           "quantity": 20,
-          "profitLoss": 93.5,
-          "stopLoss": 121.9,
-          "confidence": 49.21,
+          "profitLoss": 93.4,
+          "stopLoss": 122,
+          "confidence": 49.23,
           "upsidePct": 3.15
         },
         {
           "horizon": "3 months",
-          "targetPrice": 149.34,
+          "targetPrice": 149.45,
           "quantity": 20,
-          "profitLoss": 19.5,
-          "stopLoss": 106.82,
-          "confidence": 50.88,
+          "profitLoss": 19.6,
+          "stopLoss": 106.9,
+          "confidence": 50.89,
           "upsidePct": 0.66
         },
         {
           "horizon": "6 months",
-          "targetPrice": 141.42,
+          "targetPrice": 141.52,
           "quantity": 20,
-          "profitLoss": -138.9,
-          "stopLoss": 106.82,
-          "confidence": 53.38,
+          "profitLoss": -139,
+          "stopLoss": 106.9,
+          "confidence": 53.39,
           "upsidePct": -4.68
         },
         {
           "horizon": "12 months",
-          "targetPrice": 126.47,
+          "targetPrice": 126.56,
           "quantity": 20,
-          "profitLoss": -437.9,
-          "stopLoss": 106.82,
-          "confidence": 58.38,
+          "profitLoss": -438.2,
+          "stopLoss": 106.9,
+          "confidence": 58.39,
           "upsidePct": -14.76
         }
       ],
@@ -1739,7 +1739,7 @@
         167.49,
         146.5,
         153.6,
-        148.37
+        148.47
       ]
     }
   ],
@@ -1748,53 +1748,53 @@
       "symbol": "NVDA-MODELED",
       "underlying": "NVDA",
       "strategy": "Bull call debit spread",
-      "price": 6.76,
-      "target": 7.98,
+      "price": 6.75,
+      "target": 7.97,
       "quantity": 20,
       "profitLoss": 24.4,
-      "stopLoss": 5.54,
+      "stopLoss": 5.53,
       "confidence": 64,
       "source": "modeled_from_stock_price",
-      "updatedAt": "2026-08-14T19:05:28Z"
+      "updatedAt": "2026-08-14T22:32:43Z"
     },
     {
       "symbol": "META-MODELED",
       "underlying": "META",
       "strategy": "Bull call debit spread",
-      "price": 17.75,
-      "target": 20.95,
+      "price": 17.7,
+      "target": 20.89,
       "quantity": 20,
-      "profitLoss": 64,
-      "stopLoss": 14.56,
+      "profitLoss": 63.8,
+      "stopLoss": 14.51,
       "confidence": 64,
       "source": "modeled_from_stock_price",
-      "updatedAt": "2026-08-14T19:05:28Z"
+      "updatedAt": "2026-08-14T22:32:43Z"
     },
     {
       "symbol": "TSLA-MODELED",
       "underlying": "TSLA",
       "strategy": "Bull call debit spread",
-      "price": 10.23,
-      "target": 12.07,
+      "price": 10.27,
+      "target": 12.12,
       "quantity": 20,
-      "profitLoss": 36.8,
-      "stopLoss": 8.39,
+      "profitLoss": 37,
+      "stopLoss": 8.42,
       "confidence": 64,
       "source": "modeled_from_stock_price",
-      "updatedAt": "2026-08-14T19:05:28Z"
+      "updatedAt": "2026-08-14T22:32:44Z"
     },
     {
       "symbol": "AAPL-MODELED",
       "underlying": "AAPL",
       "strategy": "Bull call debit spread",
-      "price": 9.17,
-      "target": 10.82,
+      "price": 9.18,
+      "target": 10.83,
       "quantity": 20,
       "profitLoss": 33,
-      "stopLoss": 7.52,
+      "stopLoss": 7.53,
       "confidence": 64,
       "source": "modeled_from_stock_price",
-      "updatedAt": "2026-08-14T19:05:29Z"
+      "updatedAt": "2026-08-14T22:32:44Z"
     },
     {
       "symbol": "MSFT-MODELED",
@@ -1807,33 +1807,33 @@
       "stopLoss": 12.19,
       "confidence": 64,
       "source": "modeled_from_stock_price",
-      "updatedAt": "2026-08-14T19:05:29Z"
+      "updatedAt": "2026-08-14T22:32:44Z"
     }
   ],
   "crypto": [
     {
       "product": "BTC-USD",
-      "price": 62802.89,
+      "price": 62782.46,
       "bias": "bullish",
-      "stopLoss": 58406.69,
+      "stopLoss": 58387.69,
       "source": "coinbase_public",
-      "updatedAt": "2026-08-14T19:05:29Z"
+      "updatedAt": "2026-08-14T22:32:45Z"
     },
     {
       "product": "ETH-USD",
-      "price": 1872.04,
+      "price": 1876.5,
       "bias": "bullish",
-      "stopLoss": 1741,
+      "stopLoss": 1745.15,
       "source": "coinbase_public",
-      "updatedAt": "2026-08-14T19:05:29Z"
+      "updatedAt": "2026-08-14T22:32:45Z"
     },
     {
       "product": "SOL-USD",
-      "price": 74.69,
+      "price": 74.98,
       "bias": "bullish",
-      "stopLoss": 69.46,
+      "stopLoss": 69.73,
       "source": "coinbase_public",
-      "updatedAt": "2026-08-14T19:05:29Z"
+      "updatedAt": "2026-08-14T22:32:45Z"
     },
     {
       "product": "DOGE-USD",
@@ -1841,7 +1841,7 @@
       "bias": "bullish",
       "stopLoss": 0.06,
       "source": "coinbase_public",
-      "updatedAt": "2026-08-14T19:05:29Z"
+      "updatedAt": "2026-08-14T22:32:45Z"
     }
   ],
   "spreads": [
@@ -1849,9 +1849,9 @@
       "underlying": "NVDA",
       "direction": "bullish",
       "idea": "Buy near-the-money call and sell higher strike call",
-      "debit": 6.76,
+      "debit": 6.75,
       "maxProfit": 122,
-      "stopLoss": 5.54,
+      "stopLoss": 5.53,
       "confidence": 62,
       "source": "modeled_from_stock_price"
     },
@@ -1859,9 +1859,9 @@
       "underlying": "META",
       "direction": "bullish",
       "idea": "Buy near-the-money call and sell higher strike call",
-      "debit": 17.75,
-      "maxProfit": 320,
-      "stopLoss": 14.56,
+      "debit": 17.7,
+      "maxProfit": 319,
+      "stopLoss": 14.51,
       "confidence": 62,
       "source": "modeled_from_stock_price"
     },
@@ -1869,9 +1869,9 @@
       "underlying": "TSLA",
       "direction": "bullish",
       "idea": "Buy near-the-money call and sell higher strike call",
-      "debit": 10.23,
-      "maxProfit": 184,
-      "stopLoss": 8.39,
+      "debit": 10.27,
+      "maxProfit": 185,
+      "stopLoss": 8.42,
       "confidence": 62,
       "source": "modeled_from_stock_price"
     },
@@ -1879,9 +1879,9 @@
       "underlying": "AAPL",
       "direction": "bullish",
       "idea": "Buy near-the-money call and sell higher strike call",
-      "debit": 9.17,
+      "debit": 9.18,
       "maxProfit": 165,
-      "stopLoss": 7.52,
+      "stopLoss": 7.53,
       "confidence": 62,
       "source": "modeled_from_stock_price"
     },
